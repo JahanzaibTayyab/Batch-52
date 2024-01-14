@@ -9,7 +9,7 @@ console.log(c);
 enum Color1 {
   Red = 1,
   Green,
-  Blue,
+  Yellow,
 }
 let colorName: string = Color1[5];
 console.log(colorName);
