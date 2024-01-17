@@ -21,18 +21,22 @@ function main() {
         },
     ])
         .then((answers) => {
-        console.log(answers);
-        //   if (operation == "+") {
-        //     sum(num1, num2);
-        //   } else if (operation == "-") {
-        //     subtract(num1, num2);
-        //   } else if (operation == "*") {
-        //     multiply(num1, num2);
-        //   } else if (operation == "/") {
-        //     division(num1, num2);
-        //   } else {
-        //     console.log("Invalid Operation");
-        //   }
+        const { operation, num1, num2 } = answers;
+        if (operation == "+") {
+            sum(Number(num1), Number(num2));
+        }
+        else if (operation == "-") {
+            subtract(Number(num1), Number(num2));
+        }
+        else if (operation == "*") {
+            multiply(Number(num1), Number(num2));
+        }
+        else if (operation == "/") {
+            division(Number(num1), Number(num2));
+        }
+        else {
+            console.log("Invalid Operation");
+        }
         // Use user feedback for... whatever!!
     })
         .catch((error) => {
