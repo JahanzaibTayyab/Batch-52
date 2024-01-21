@@ -53,13 +53,22 @@ function isPalindrome(str: string): boolean {
 const book = {
   title: "The Catcher in the Rye",
   author: "J.D. Salinger",
+};
+```
+
+**8. Object for Book Function:**
+
+```typescript
+const book = {
+  title: "The Catcher in the Rye",
+  author: "J.D. Salinger",
   displayDetails: function () {
     console.log(`Title: ${this.title}, Author: ${this.author}`);
   },
 };
 ```
 
-**8. Object for Person:**
+**9. Object for Person:**
 
 ```typescript
 const person = {
@@ -69,7 +78,7 @@ const person = {
 };
 ```
 
-**9. Array of Fruits:**
+**10. Array of Fruits:**
 
 ```typescript
 const fruits: string[] = ["apple", "banana", "orange"];
@@ -78,16 +87,21 @@ for (const fruit of fruits) {
 }
 ```
 
-**10. Average of Numbers:**
+**11. Average of Numbers:**
 
 ```typescript
 function averageOfNumbers(numbers: number[]): number {
-  const sum = numbers.reduce((acc, num) => acc + num, 0);
+  let sum = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+
   return sum / numbers.length;
 }
 ```
 
-**11. Concatenate Arrays:**
+**12. Concatenate Arrays:**
 
 ```typescript
 const array1: number[] = [1, 2, 3];
@@ -95,21 +109,21 @@ const array2: number[] = [4, 5, 6];
 const concatenatedArray: number[] = array1.concat(array2);
 ```
 
-**12. Filter Even Numbers:**
+**13. Filter Even Numbers:**
 
 ```typescript
 const numbers: number[] = [1, 2, 3, 4, 5, 6];
 const evenNumbers: number[] = numbers.filter((num) => num % 2 === 0);
 ```
 
-**13. Transform Array with Lengths:**
+**14. Transform Array with Lengths:**
 
 ```typescript
 const words: string[] = ["apple", "banana", "orange"];
 const wordLengths: number[] = words.map((word) => word.length);
 ```
 
-**14. Check Positive Numbers:**
+**15. Check Positive Numbers:**
 
 ```typescript
 function areAllPositive(numbers: number[]): boolean {
@@ -117,7 +131,7 @@ function areAllPositive(numbers: number[]): boolean {
 }
 ```
 
-**15. For Loop:**
+**16. For Loop:**
 
 ```typescript
 for (let i = 1; i <= 5; i++) {
@@ -125,7 +139,7 @@ for (let i = 1; i <= 5; i++) {
 }
 ```
 
-**16. While Loop Countdown:**
+**17. While Loop Countdown:**
 
 ```typescript
 let count = 10;
@@ -135,14 +149,14 @@ while (count >= 1) {
 }
 ```
 
-**17. Find Index of Element:**
+**18. Find Index of Element:**
 
 ```typescript
 const array: number[] = [10, 20, 30, 40, 50];
 const indexOfElement: number = array.indexOf(30);
 ```
 
-**18. Callback with setTimeout:**
+**19. Callback with setTimeout:**
 
 ```typescript
 function delayedMessage(callback: () => void): void {
@@ -155,7 +169,7 @@ delayedMessage(() => {
 });
 ```
 
-**19. Callback Function:**
+**20. Callback Function:**
 
 ```typescript
 function withCallback(value: number, callback: (result: number) => void): void {
@@ -169,7 +183,7 @@ withCallback(5, (result) => {
 });
 ```
 
-**20. Promise with Delay:**
+**21. Promise with Delay:**
 
 ```typescript
 function delayedPromise(): Promise<string> {
@@ -186,7 +200,7 @@ delayedPromise().then((message) => {
 });
 ```
 
-**21. Chained Promises:**
+**22. Chained Promises:**
 
 ```typescript
 function sequentialPromises(): Promise<string> {
@@ -207,7 +221,7 @@ sequentialPromises().then((finalMessage) => {
 });
 ```
 
-**22. Promise.all:**
+**23. Promise.all:**
 
 ```typescript
 const promise1 = delayedPromise();
@@ -218,7 +232,7 @@ Promise.all([promise1, promise2]).then((messages) => {
 });
 ```
 
-**23. Default Parameter:**
+**24. Default Parameter:**
 
 ```typescript
 function greet(name: string = "Guest"): string {
@@ -229,7 +243,7 @@ function greet(name: string = "Guest"): string {
 const greeting = greet();
 ```
 
-**24. Sort Objects by Property:**
+**25. Sort Objects by Property:**
 
 ```typescript
 const objects: { name: string; age: number }[] = [
@@ -241,7 +255,7 @@ const objects: { name: string; age: number }[] = [
 const sortedObjects = objects.sort((a, b) => a.age - b.age);
 ```
 
-**25. Rest Parameter:**
+**26. Rest Parameter:**
 
 ```typescript
 function sumNumbers(...numbers: number[]): number {
@@ -252,7 +266,7 @@ function sumNumbers(...numbers: number[]): number {
 const result = sumNumbers(1, 2, 3, 4);
 ```
 
-**26. Nested Loop Pattern:**
+**27. Nested Loop Pattern:**
 
 ```typescript
 for (let i = 1; i <= 5; i++) {
@@ -264,7 +278,7 @@ for (let i = 1; i <= 5; i++) {
 }
 ```
 
-**27. Second-Largest Number:**
+**28. Second-Largest Number:**
 
 ```typescript
 function secondLargest(numbers: number[]): number {
@@ -278,7 +292,7 @@ const numbers = [10, 5, 8, 12, 15, 5, 7];
 const secondLargestNum = secondLargest(numbers);
 ```
 
-**28. Leap Year Checker:**
+**29. Leap Year Checker:**
 
 ```typescript
 function isLeapYear(year: number): boolean {
@@ -289,7 +303,7 @@ function isLeapYear(year: number): boolean {
 const isLeap = isLeapYear(2024);
 ```
 
-**29. Simple Quiz Program:**
+**30. Simple Quiz Program:**
 
 ```typescript
 class Question {
