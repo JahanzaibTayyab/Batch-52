@@ -1,11 +1,25 @@
-function fetchData(url: string) {
+function fetchData() {
   return new Promise((resolve, reject) => {
-    setTimeout(function () {
-      const data = "Hello i am data from callback";
-      resolve(data);
-    }, 1000);
+    setTimeout(() => {
+      console.log("I am setTimeOut Function");
+      reject("I am reject");
+    }, 3000);
   });
 }
+
+// fetchData();
+//console.log("Promise", fetchData());
+
+fetchData()
+  .then(() => {
+    console.log("I am then function ");
+  })
+  .catch((error) => {
+    console.log("I am catch function ");
+  })
+  .finally(() => {
+    console.log("I am finally function");
+  });
 
 // fetchData("sdfghjk")
 //   .then((data) => {
@@ -35,3 +49,16 @@ fetchData2("fghjk")
   .finally(() => {
     console.log("Finally");
   });
+
+async function fetchData3(url: string) {
+  return new Promise((resolve, reject) => {
+    if (Math.random() > 0.5) {
+      resolve(`Data for ${url}`);
+    } else {
+      reject("fghjkl");
+    }
+  });
+}
+
+const response = await fetchData3("fghjk");
+console.log("🚀 ~ response:", response);

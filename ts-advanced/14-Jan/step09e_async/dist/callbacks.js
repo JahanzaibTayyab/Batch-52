@@ -15,7 +15,6 @@ function handleData(data) {
 // Call the fetchData function with the handleData callback
 //fetchData(handleData);
 console.log("Fetching data...");
-export {};
 // console.log("Fetching data...");
 // console.log("Fetching data...");
 // console.log("Fetching data...");
@@ -49,3 +48,15 @@ export {};
 //   cleanClothes();
 // };
 // sunDayRoutine();
+// function
+function greet(name, callback) {
+    console.log("Hi" + " " + name);
+    callback();
+}
+// callback function
+function callMe() {
+    console.log("I am callback function");
+}
+// passing function as an argument
+greet("Peter", callMe);
+export {};

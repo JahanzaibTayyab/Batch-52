@@ -57,3 +57,17 @@ console.log("Fetching data...");
 // };
 
 // sunDayRoutine();
+
+// function
+function greet(name: string, callback: () => void) {
+  console.log("Hi" + " " + name);
+  callback();
+}
+
+// callback function
+function callMe() {
+  console.log("I am callback function");
+}
+
+// passing function as an argument
+greet("Peter", callMe);
