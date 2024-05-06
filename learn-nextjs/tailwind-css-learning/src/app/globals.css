@@ -1,0 +1,4 @@
+@tailwind base; 
+/* preflight */
+@tailwind components;
+@tailwind utilities;
