@@ -16,7 +16,10 @@ const page = () => {
       {/* {external styling} */}
       <h2>Tag Selector styling</h2>
       <h2 className="blue-head">Tag + Class Selector styling</h2>
-      <h2 id="h0" className="blue-head">
+      <h2
+        id="h0"
+        className="m-3 blue-head text-purple-500 text-purple-900 m-10"
+      >
         CSS External Styling w.r.t tagname + class + id
       </h2>
       <h2 className="blue-head">Tag + Class Selector styling</h2>

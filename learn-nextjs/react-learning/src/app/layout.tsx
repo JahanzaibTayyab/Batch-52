@@ -18,8 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-gray-300 p-5">
+        <div className="bg-gray-300 p-5 space-x-5">
           <Link href="/rendering-list">Rendering List</Link>
+          <Link href="/state_as_snapshot " className="text-blue-500">
+            State as a Snapshot
+          </Link>
         </div>
         {children}
       </body>

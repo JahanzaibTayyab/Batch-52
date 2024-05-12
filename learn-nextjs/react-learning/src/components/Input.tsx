@@ -2,13 +2,19 @@ import React from "react";
 
 type InputProps = {
   name: string;
-  type: string;
+  type?: string;
   placeholder: string;
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-function Input({ placeholder, value, onChange, name, type }: InputProps) {
+function Input({
+  placeholder,
+  value,
+  onChange,
+  name,
+  type = "input",
+}: InputProps) {
   return (
     <input
       type={type}

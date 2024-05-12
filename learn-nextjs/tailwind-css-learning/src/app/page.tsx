@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <div>
       Tailwind Styling
-      {/* Styling not applied if the directory is not added in content in tailwind.config.ts */}
-      {/* <Sidebar /> */}
+      Styling not applied if the directory is not added in content in tailwind.config.ts */}
+     <Sidebar />
       <br />
       {/* Component styling with Tailwind */}
       <Heading />
@@ -40,6 +40,33 @@ export default function Home() {
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.
       </p>
+
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      
+      <div className="flex justify-evenly flex-wrap-reverse">
+        <div className="quote">
+          <span>- David J. Schwartz</span>
+        </div>
+        <div className="quote">
+          <span>- Robin Sharma</span>
+        </div>
+        
+        <div className="quote">
+          <span>- Zig Ziglar</span>
+        </div>
+        <div className="quote">
+          <span>- Zig Ziglar</span>
+        </div>
+        <div className="quote">
+          <span>- Zig Ziglar</span>
+        </div>
+      </div>
+
     </div>
   );
 }

@@ -4,6 +4,7 @@ h2 {
 } /* tag selector */
 
 .blue-head {
+  color: blue;
   background-color: cadetblue;
 } /* class selector */
 
