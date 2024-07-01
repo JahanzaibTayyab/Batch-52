@@ -15,7 +15,7 @@ export default async function Home() {
         <h1 className="font-bold text-lg">Sanity Integration</h1>
       </div>
       <div className="flex gap-5">
-        {blogs.map((blog) => (
+        {blogs.map((blog: any) => (
           <div key={blog._id} className="border rounded-md shadow-lg p-5">
             <h1>{blog.Title}</h1>
             <p>{blog.description}</p>
